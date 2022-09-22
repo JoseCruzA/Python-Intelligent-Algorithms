@@ -13,6 +13,7 @@ class GUI:
         self.root = tk.Tk()
         self.frameBtn = tk.Frame(self.root, bg="white")
         self.frameGraph = tk.Frame(self.root, bg="white")
+        self.canvas = None
         
         self.frameBtn.pack(side=tk.LEFT, expand=True)
         self.frameGraph.pack(side=tk.RIGHT, expand=True)
@@ -53,11 +54,16 @@ class GUI:
         self.graph(xName, yName, xData, yData, regression)
 
     def graph(self, xName, yName, xData, yData, regression):
+        if self.canvas is not None:
+            self.canvas.get_tk_widget().destroy()
+        
         figure = plt.Figure(figsize=(5, 4), dpi=100)
         ax = figure.add_subplot(111)
         canvas = figureCanvas(figure, self.frameGraph)
+        ax.clear()
         canvas.draw()
         canvas.get_tk_widget().pack()
+        self.canvas = canvas
         
         ax.scatter(xData, yData, color='red')
         ax.plot(xData, regression.predictList(xData), color='green')
