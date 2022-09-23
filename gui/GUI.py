@@ -22,7 +22,7 @@ class GUI:
     
     def start(self):
         self.root.title("Linear Regression")
-        self.root.geometry("750x450")
+        self.root.geometry("770x450")
         self.root.configure(bg="white")
 
         loadLabel = tk.Label(self.frameBtn, text="Select a JSON file with the data to operate", bg="white", font="Arial 10")
