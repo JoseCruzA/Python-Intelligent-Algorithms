@@ -76,21 +76,32 @@ class Id3:
 
     def get_result(self):
         current_category = list(self.entropies.keys())[0]
-        result = {current_category: {}}
+        if current_category == "Humedad":
+            print("\n")
+        result = {}
+        ordered_result = {current_category: {}}
 
         for (key, value) in self.resumed_data[current_category].items():
             for (category, count) in value.items():
                 if count == sum(value.values()):
-                    result[current_category][key] = category
+                    result[key] = category
                     break
         
         for (key, value) in self.resumed_data[current_category].items():
             for (category, count) in value.items():
-                if count != sum(value.values()) and key not in result[current_category].keys():
-                    result[current_category][key] = self.update_data(current_category, result[current_category].keys())
+                if count != sum(value.values()) and key not in result.keys() and len(result.keys()) > 0:
+                    result[key] = self.update_data(current_category, result.keys())
                     break
         
-        return result
+        if len(result.keys()) == 0:
+            for (key, value) in self.resumed_data[current_category].items():
+                for (category, count) in value.items():
+                    if count == max(value.values()) and key not in result.keys():
+                        result[key] = category
+                        break
+                    
+        ordered_result[current_category] = dict(sorted(result.items(), key=lambda x: x[0]))
+        return ordered_result
 
             
 
@@ -108,7 +119,7 @@ class Id3:
         
         id3 = Id3(data)
         id3.start()
-        
+
         return id3.get_result()
 
     def print_result(self):
