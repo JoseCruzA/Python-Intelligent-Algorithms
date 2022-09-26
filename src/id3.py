@@ -100,9 +100,7 @@ class Id3:
                     
         ordered_result[current_category] = dict(sorted(result.items(), key=lambda x: x[0]))
         return ordered_result
-
-            
-
+          
     def update_data(self, current_category, data_to_remove):
         index_to_remove = []
         data = {}

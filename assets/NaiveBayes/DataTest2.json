@@ -1,0 +1,16 @@
+{
+    "Antenas": [1, 1, 1, 0, 1, 2],
+    "Colas": [0, 0, 2, 2, 1, 2],
+    "Nucleos": [2, 1, 0, 1, 1, 1],
+    "Cuerpo": ["Rayado", "Blanco", "Rayado", "Rayado", "Rayado", "Rayado"],
+    "Clase": [
+      "Normal",
+      "Cancerigena",
+      "Normal",
+      "Normal",
+      "Cancerigena",
+      "Cancerigena"
+    ],
+    "dataToAsign": [1, 2, 1, "Rayado"]
+  }
+  
