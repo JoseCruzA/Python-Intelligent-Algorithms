@@ -8,16 +8,15 @@ def main():
     """gui = GUI()
     gui.start()"""
 
-    dataToAsign, data = Json("assets/NaiveBayes/DataTest2.json").read()
+    """dataToAsign, data = Json("assets/NaiveBayes/DataTest2.json").read()
 
     bayes = Bayes(dataToAsign, data)
-    bayes.start()
+    bayes.start()"""
 
-    """id3 = Id3(data)
-    id3.start()
+    """data = Json("assets/id3/DataTest1.json").read()
 
-    print("\n Resultado: \n")
-    print(id3.result)"""
+    id3 = Id3(data)
+    id3.start()"""
 
 
 main()

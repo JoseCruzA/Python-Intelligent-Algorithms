@@ -1,12 +1,11 @@
-from itertools import islice 
+from src.Algorithm import Algorithm
 
 
-class Bayes:
+class Bayes(Algorithm):
 
     def __init__(self, dataToAsign, data):
-        self.data = data
+        Algorithm.__init__(self, data)
         self.dataToAsign = dataToAsign
-        self.categories = {}
         self.resumed_data = {}
         self.probabilities = {}
         self.result = {}
@@ -18,17 +17,6 @@ class Bayes:
         self.result = self.calify_data(apriori)
 
         self.print_result()
-        
-    
-    def get_categories(self):
-        category = list(self.data.keys())[-1]
-        categories = {category: {data: 0 for data in self.data[category]}}
-
-        for data in self.data[category]:
-            if data not in categories:
-                categories[category][data] += 1
-        
-        return categories
 
     def get_resumed_data(self):
         resumed_data = {
@@ -77,4 +65,4 @@ class Bayes:
         print(self.resumed_data)
         print(self.probabilities)
         print(self.result)
-        print("\n Result: ", list(self.result.keys())[0])
+        print("\n For the data {} the result is: {}".format(self.dataToAsign ,list(self.result.keys())[0]))
