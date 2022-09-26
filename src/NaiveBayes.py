@@ -65,4 +65,4 @@ class Bayes(Algorithm):
         print(self.resumed_data)
         print(self.probabilities)
         print(self.result)
-        print("\n For the data {} the result is: {}".format(self.dataToAsign ,list(self.result.keys())[0]))
+        print("\n For the data {} the result is: {}".format(self.dataToAsign ,list(self.result.keys())[0].r))
