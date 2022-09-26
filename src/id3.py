@@ -76,8 +76,6 @@ class Id3:
 
     def get_result(self):
         current_category = list(self.entropies.keys())[0]
-        if current_category == "Humedad":
-            print("\n")
         result = {}
         ordered_result = {current_category: {}}
 
