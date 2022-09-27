@@ -9,10 +9,10 @@ def main():
     """gui = GUI()
     gui.start()"""
 
-    """dataToAsign, data = Json("assets/NaiveBayes/DataTest3.json").read()
+    dataToAsign, data = Json("assets/NaiveBayes/DataTest3.json").read()
 
     bayes = Bayes(dataToAsign, data)
-    bayes.start()"""
+    bayes.start()
 
     """data = Json("assets/id3/DataTest1.json").read()
 
@@ -20,10 +20,10 @@ def main():
     id3.start()"""
 
     
-    dataToAsign, data, k = Json("assets/KNN/DataTest2.json").read()
+    """dataToAsign, data, k = Json("assets/KNN/DataTest2.json").read()
 
     knn = Knn(data, dataToAsign, k)
-    knn.start()
+    knn.start()"""
 
 
 main()

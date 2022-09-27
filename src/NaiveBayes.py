@@ -16,7 +16,7 @@ class Bayes(Algorithm):
         self.probabilities = self.calculate_probabilities()
         self.result = self.calify_data(apriori)
 
-        self.print_result()
+        self.print_result(apriori)
 
     def get_resumed_data(self):
         resumed_data = {
@@ -60,9 +60,10 @@ class Bayes(Algorithm):
         return results
 
     
-    def print_result(self):
-        print(self.categories)
-        print(self.resumed_data)
-        print(self.probabilities)
-        print(self.result)
-        print("\n For the data {} the result is: {}".format(self.dataToAsign ,list(self.result.keys())[0]))
+    def print_result(self, apriori):
+        print("Naive Bayes\n")
+        print("Data Clasification:\n {}\n".format(self.categories))
+        print("Data Model:\n {}\n".format(self.resumed_data))
+        print("Apriori probabilities for class apriori -> {}:\n {}\n".format(apriori, self.probabilities))
+        print("For the data {} the probabilities are:\n {}\n".format(self.dataToAsign, self.result))
+        print("For the data {} the result is: {}".format(self.dataToAsign ,list(self.result.keys())[0]))
