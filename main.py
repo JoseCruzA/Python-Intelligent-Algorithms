@@ -9,17 +9,16 @@ def main():
     """gui = GUI()
     gui.start()"""
 
-    dataToAsign, data = Json("assets/NaiveBayes/DataTest3.json").read()
-
-    bayes = Bayes(dataToAsign, data)
-    bayes.start()
-
     """data = Json("assets/id3/DataTest1.json").read()
 
     id3 = Id3(data)
     id3.start()"""
 
-    
+    dataToAsign, data = Json("assets/NaiveBayes/DataTest3.json").read()
+
+    bayes = Bayes(dataToAsign, data)
+    bayes.start()
+
     """dataToAsign, data, k = Json("assets/KNN/DataTest2.json").read()
 
     knn = Knn(data, dataToAsign, k)
