@@ -1,14 +1,11 @@
-from calendar import c
-from unicodedata import category
 from math import log2
-from numpy import abs
+from src.Algorithm import Algorithm
 
 
-class Id3:
+class Id3(Algorithm):
 
     def __init__(self, data):
-        self.data = data
-        self.categories = {}
+        Algorithm.__init__(self, data)
         self.resumed_data = {}
         self.entropies = {}
         self.result = {}
@@ -20,16 +17,6 @@ class Id3:
         self.result = self.get_result()
 
         self.print_result()
-
-    def get_categories(self):
-        category = list(self.data.keys())[-1]
-        categories = {category: {data: 0 for data in self.data[category]}}
-
-        for data in self.data[category]:
-            if data not in categories:
-                categories[category][data] += 1
-        
-        return categories
     
     def get_resumed_data(self):
         resumed_data = {}
@@ -100,9 +87,7 @@ class Id3:
                     
         ordered_result[current_category] = dict(sorted(result.items(), key=lambda x: x[0]))
         return ordered_result
-
-            
-
+          
     def update_data(self, current_category, data_to_remove):
         index_to_remove = []
         data = {}
@@ -125,3 +110,4 @@ class Id3:
         print(self.resumed_data)
         print(self.entropies)
         print("\n")
+        print("Result: ", self.result)
