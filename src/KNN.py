@@ -46,8 +46,9 @@ class Knn():
         return max(near_classes, key=near_classes.get)
 
     def print_result(self):
-        print(self.resumen_data)
-        print(self.distances)
-        print(self.near_data)
+        print("Clasifier: KNN\n")
+        print("Resumed and clasified data:\n {}\n".format(self.resumen_data))
+        print("Points with euclidean distance:\n {}\n".format(self.distances))
+        print("k = {} nearest neighbors:\n {}\n".format(self.k, self.near_data))
         print("For data {} with k = {} the result is: {}".format(
             tuple(self.dataToAsign), self.k, self.result))
