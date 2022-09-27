@@ -10,17 +10,25 @@ class Json:
         with open(self.path) as file:
             data = json.load(file)
             dataToAsign = None
+            dataToReturn = data
 
             if "axis_x" in data.keys():
-                return (data["axis_x"]["name"], 
-                    data["axis_y"]["name"], 
-                    data["axis_x"]["data"], 
-                    data["axis_y"]["data"], 
-                    data["dataToPredict"])
+                dataToReturn = (data["axis_x"]["name"],
+                                data["axis_y"]["name"],
+                                data["axis_x"]["data"],
+                                data["axis_y"]["data"],
+                                data["dataToPredict"])
+            elif "k" in data.keys():
+                dataToAsign = data["dataToAsign"]
+                k = data["k"]
+                del data["dataToAsign"]
+                del data["k"]
+
+                dataToReturn = (dataToAsign, data, k)
             elif "dataToAsign" in data.keys():
                 dataToAsign = data["dataToAsign"]
                 del data["dataToAsign"]
-                
-                return (dataToAsign, data)
-            
-            return data
+
+                dataToReturn = (dataToAsign, data)
+
+            return dataToReturn
