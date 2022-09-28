@@ -16,9 +16,9 @@ def main():
     id3 = Id3(data)
     id3.start()"""
 
-    #dataToAsign, data = Json("assets/NaiveBayes/DataTest3.json").read()
+    """dataToAsign, data = Json("assets/NaiveBayes/DataTest3.json").read()
 
-    """bayes = Bayes(dataToAsign, data)
+    bayes = Bayes(dataToAsign, data)
     bayes.start()"""
 
     """dataToAsign, data, k = Json("assets/KNN/DataTest2.json").read()
@@ -26,20 +26,13 @@ def main():
     knn = Knn(data, dataToAsign, k)
     knn.start()"""
 
-
-    data = Json("assets/FPGrowth/DataTest.json").read()
+    """data = Json("assets/FPGrowth/DataTest.json").read()
 
     Fp = FPGrowth(data)
-    Fp.start()
+    Fp.start()"""
 
-main()
+    """data = Json("assets\APRIORI\Test.json").read()
 
-
-"""from src.APRIORI import APRIORI
-from src.JSONReader import JSONReader
-
-def main():
-    data = JSONReader("assets\Test.json").reader()
     Apriori = APRIORI(data)
     Apriori.start(0.60, 0.3334)"""
 
