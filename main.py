@@ -2,7 +2,6 @@ from src.FPGrowth import FPGrowth
 from src.APRIORI import APRIORI
 from src.NaiveBayes import Bayes
 from src.JsonReader import Json
-
 from src.id3 import Id3
 from src.KNN import Knn
 
