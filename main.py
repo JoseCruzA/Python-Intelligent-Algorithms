@@ -1,4 +1,5 @@
 from src.FPGrowth import FPGrowth
+from src.APRIORI import APRIORI
 from src.NaiveBayes import Bayes
 from src.JsonReader import Json
 
@@ -40,6 +41,7 @@ from src.JSONReader import JSONReader
 def main():
     data = JSONReader("assets\Test.json").reader()
     Apriori = APRIORI(data)
-    Apriori.start(0.60, 0.3334)
+    Apriori.start(0.60, 0.3334)"""
 
-main()"""
+
+main()

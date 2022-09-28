@@ -17,7 +17,7 @@ class Json:
                                 data["axis_y"]["name"],
                                 data["axis_x"]["data"],
                                 data["axis_y"]["data"],
-                                data["dataToPredict"])
+                                data["data_to_predict"])
             elif "k" in data.keys():
                 dataToAsign = data["dataToAsign"]
                 k = data["k"]
@@ -30,23 +30,11 @@ class Json:
                 del data["dataToAsign"]
 
                 dataToReturn = (dataToAsign, data)
+            elif "apriori" in data.keys():
+                itemsList = []
+                for key, value in data["apriori"].items():
+                    itemsList.append(value)
+                
+                dataToReturn = itemsList
 
             return dataToReturn
-
-"""import json
-
-
-class JSONReader:
-    
-    
-    def __init__(self, path):
-        self.path = path
-
-    def reader(self):
-        with open(self.path) as file:
-            data = json.load(file)
-
-        itemsList = []
-        for key, value in data.items():
-            itemsList.append(value)
-        return (itemsList)"""

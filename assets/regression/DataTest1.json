@@ -7,5 +7,5 @@
     "name": "Weight",
     "data": [75, 71, 83, 63, 70]
   },
-  "dataToPredict": 172
+  "data_to_predict": 172
 }
