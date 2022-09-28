@@ -32,3 +32,21 @@ class Json:
                 dataToReturn = (dataToAsign, data)
 
             return dataToReturn
+
+"""import json
+
+
+class JSONReader:
+    
+    
+    def __init__(self, path):
+        self.path = path
+
+    def reader(self):
+        with open(self.path) as file:
+            data = json.load(file)
+
+        itemsList = []
+        for key, value in data.items():
+            itemsList.append(value)
+        return (itemsList)"""

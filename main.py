@@ -26,3 +26,14 @@ def main():
 
 
 main()
+
+
+"""from src.APRIORI import APRIORI
+from src.JSONReader import JSONReader
+
+def main():
+    data = JSONReader("assets\Test.json").reader()
+    Apriori = APRIORI(data)
+    Apriori.start(0.60, 0.3334)
+
+main()"""
