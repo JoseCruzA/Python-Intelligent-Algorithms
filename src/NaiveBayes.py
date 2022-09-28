@@ -14,7 +14,7 @@ class Bayes(Algorithm):
         self.categories = self.get_categories()
         self.resumed_data = self.get_resumed_data()
         self.probabilities = self.calculate_probabilities()
-        self.result = self.calify_data(apriori)
+        self.result = self.clasify_data(apriori)
 
         self.print_result(apriori)
 
@@ -45,7 +45,7 @@ class Bayes(Algorithm):
         
         return probabilities
     
-    def calify_data(self, apriori):
+    def clasify_data(self, apriori):
         results = {key: 0 for key in self.probabilities.keys()}
         index = 0
 
