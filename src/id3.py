@@ -106,8 +106,8 @@ class Id3(Algorithm):
         return id3.get_result()
 
     def print_result(self):
-        print(self.categories)
-        print(self.resumed_data)
-        print(self.entropies)
-        print("\n")
+        print("Decision Tree\n")
+        print("Data clasifications:\n {}\n".format(self.categories))
+        print("Clasified data:\n {}\n".format(self.resumed_data))
+        print("Entropy for each column:\n {}\n".format(self.entropies))
         print("Result: ", self.result)

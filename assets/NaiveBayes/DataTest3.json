@@ -1,0 +1,8 @@
+{
+    "Color": ["amarillo", "¬amarillo", "¬amarillo", "amarillo", "¬amarillo", "amarillo", "¬amarillo", "amarillo", "¬amarillo", "amarillo"],
+    "Aspecto": ["moteado", "¬moteado", "moteado", "moteado", "¬moteado", "¬moteado", "moteado", "¬moteado", "moteado", "moteado"],
+    "Tamaño": ["grande", "¬grande", "¬grande", "grande", "¬grande", "¬grande", "grande", "grande", "grande", "¬grande"],
+    "Longitud": ["largo", "¬largo", "¬largo", "¬largo", "largo", "largo", "largo", "¬largo", "¬largo", "¬largo"],
+    "Clase": ["venenoso", "venenoso", "venenoso", "comestible", "comestible", "venenoso", "comestible", "venenoso", "comestible", "venenoso"],
+    "dataToAsign": ["¬amarillo", "¬moteado", "grande", "largo"]
+}
