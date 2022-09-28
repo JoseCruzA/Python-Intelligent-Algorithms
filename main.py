@@ -14,12 +14,12 @@ def main():
     id3 = Id3(data)
     id3.start()"""
 
-    dataToAsign, data = Json("assets/NaiveBayes/DataTest3.json").read()
+    """dataToAsign, data = Json("assets/NaiveBayes/DataTest1.json").read()
 
     bayes = Bayes(dataToAsign, data)
-    bayes.start()
+    bayes.start()"""
 
-    """dataToAsign, data, k = Json("assets/KNN/DataTest2.json").read()
+    """dataToAsign, data, k = Json("assets/KNN/DataTest1.json").read()
 
     knn = Knn(data, dataToAsign, k)
     knn.start()"""
