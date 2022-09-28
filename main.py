@@ -1,3 +1,4 @@
+from src.APRIORI import APRIORI
 from src.NaiveBayes import Bayes
 from src.JsonReader import Json
 from gui.GUI import GUI
@@ -24,16 +25,9 @@ def main():
     knn = Knn(data, dataToAsign, k)
     knn.start()"""
 
+    """data = Json("assets\APRIORI\Test.json").read()
+    Apriori = APRIORI(data)
+    Apriori.start(0.60, 0.3334)"""
+
 
 main()
-
-
-"""from src.APRIORI import APRIORI
-from src.JSONReader import JSONReader
-
-def main():
-    data = JSONReader("assets\Test.json").reader()
-    Apriori = APRIORI(data)
-    Apriori.start(0.60, 0.3334)
-
-main()"""

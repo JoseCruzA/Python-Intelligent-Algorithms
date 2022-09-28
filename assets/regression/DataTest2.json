@@ -7,5 +7,5 @@
     "name": "Cost",
     "data": [400, 390, 1200, 1900, 950]
   },
-  "dataToPredict": 52
+  "data_to_predict": 52
 }
